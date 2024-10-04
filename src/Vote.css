@@ -1,0 +1,19 @@
+.vote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--var-very-light-gray);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 20px;
+}
+
+.vote > * {
+  padding: 0.25rem;
+}
+
+.vote button {
+  background: none;
+  border: none;
+}
