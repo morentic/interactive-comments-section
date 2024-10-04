@@ -1,0 +1,23 @@
+:root {
+  --var-moderate-blue: hsl(238, 40%, 52%);
+  --var-soft-red: hsl(358, 79%, 66%);
+  --var-light-grayish-blue: hsl(239, 57%, 85%);
+  --var-pale-red: hsl(357, 100%, 86%);
+
+  --var-dark-blue: hsl(212, 24%, 26%);
+  --var-graysish-blue: hsl(211, 10%, 45%);
+  --var-light-gray: hsl(223, 19%, 93%);
+  --var-very-light-gray: hsl(228, 33%, 97%);
+  --var-white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--var-very-light-gray);
+  color: var(--var-graysish-blue);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
