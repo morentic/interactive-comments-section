@@ -1,0 +1,33 @@
+.comment-new {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 1rem;
+  background-color: var(--var-white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.comment-new textarea {
+  border: 1px solid var(--var-light-gray);
+  border-radius: 0.5rem;
+  width: 100%;
+  resize: none;
+  padding: 1rem;
+}
+
+.comment-new button {
+  background: none;
+  border: none;
+  background-color: var(--var-moderate-blue);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  color: var(--var-white);
+  text-transform: uppercase;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.comment-new img {
+  width: 2rem;
+  height: 2rem;
+}

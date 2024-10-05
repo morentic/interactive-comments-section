@@ -3,11 +3,14 @@ import data from "../data.json";
 import "./App.css";
 import AddComment from "./AddComment";
 import { useState } from "react";
+import { UserContext } from "./UserContext";
 
 function App() {
   const [commentItems, setCommentItems] = useState(
     data.comments.map((comment) => <Comment {...comment}></Comment>)
   );
+
+  const currentUser = data.currentUser;
 
   const handleClick = (content: string): undefined => {
     console.log(content);
@@ -15,15 +18,9 @@ function App() {
     const newComment: Comment = {
       id: 1,
       content: content,
-      createdAt: "1 month ago",
-      score: 12,
-      user: {
-        image: {
-          png: "./images/avatars/image-amyrobson.png",
-          webp: "./images/avatars/image-amyrobson.webp",
-        },
-        username: "amyrobson",
-      },
+      createdAt: "today",
+      score: 0,
+      user: currentUser,
       replies: [],
     };
 
@@ -32,10 +29,12 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        {commentItems}
-        <AddComment handleClick={handleClick} />
-      </div>
+      <UserContext.Provider value={currentUser}>
+        <div className="container">
+          {commentItems}
+          <AddComment handleClick={handleClick} />
+        </div>
+      </UserContext.Provider>
     </>
   );
 }

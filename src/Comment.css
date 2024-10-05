@@ -7,7 +7,7 @@
   display: flex;
   padding: 1rem;
   gap: 1rem;
-  max-width: 600px;
+  width: -moz-available;
   background-color: var(--var-white);
   margin: 1rem 0;
 }
