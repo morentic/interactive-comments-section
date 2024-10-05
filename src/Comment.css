@@ -1,14 +1,49 @@
-.comment {
+.col {
   display: flex;
   flex-direction: column;
+}
+
+.comment {
+  display: flex;
   padding: 1rem;
   gap: 1rem;
   max-width: 600px;
+  background-color: var(--var-white);
+  margin: 1rem 0;
+}
+
+.comment > div:nth-child(3) {
+  grid-column: span 2;
+}
+
+.comment .header {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.comment .header button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--var-moderate-blue);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comment .header img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .comment .content {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  background-color: var(--var-white);
+}
+
+.replies {
+  margin-left: 2rem;
 }
